@@ -18,7 +18,7 @@ Because of this, I wanted to make a machine learning model that could predict th
 - Determine any dataset shift
 
 ## Tools
-Python was used for this project. The following libraries were utilized:
+Python was used for this project. The following libraries were utilized:  
 - Numpy
 - Pandas
 - Matplotlib
@@ -78,7 +78,7 @@ The three models used were trained with 70% of the pre-pandemic data and then te
 
 Evaluation focused mainly on F1 score and Cohen’s Kappa as they are more reliable measures of multi-class classification problems.
 
-The table below summarizes the performance of the 3 models trained. Neural Networks had the best performance with an F1 score of 76.60 and a Cohen kappa of 0.7064.
+The table below summarizes the performance of the 3 models trained. **Neural Networks** had the best performance with an **F1 score of 76.60** and a **Cohen kappa of 0.7064**.
 
 <p align="center">
   <img width="100%" height="100%" src="/img/posts/price-used-cars/model-performance.jpg" />
