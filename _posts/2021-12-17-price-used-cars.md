@@ -30,15 +30,15 @@ Python was used for this project. The following libraries were utilized:
 - Keras
 
 ## Steps
-1) Data cleaning and preprocessing
-2) Exploratory Data Analysis 
-3) Train-test split 
+1) Data cleaning and preprocessing  
+2) Exploratory Data Analysis  
+3) Train-test split   
 4) Modelling:  
     a) XGboost  
     b) Random Forest  
     c) Neural Networks  
-5) Comparison of model performance 
-6) Conclusion 
+5) Comparison of model performance  
+6) Conclusion   
 
 ## The Data
 The dataset to be used was taken from [Kaggle.com](https://www.kaggle.com/datasets/austinreese/craigslist-carstrucks-data). The used cars dataset was first scraped in 2018 from Craigslist. It is updated every few months with the latest data. The dataset was split into pre-pandemic and pandemic datasets. There are 23 variables in the dataset before any preprocessing and cleaning. It has 1,961,218 samples with 1,076,152 pre-pandemic data and 885,066 data during the pandemic.
