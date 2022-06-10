@@ -5,8 +5,6 @@ subtitle: "Machine Learning Classification"
 background: '/img/posts/price-used-cars/blue-car.jpg'
 ---
 
-# Predicting The Price Range Of Used Cars
-
 ## Description
 During the pandemic, there was a noticeable increase in the price of used cars with some selling for more money than new cars. This was mainly due to the shortages in new cars which was driven by a global semiconductor shortage. People were less willing to suffer through the long wait times to get a new car and it was difficult to find the models they liked in the car lot. Thus, the demand for used cars steadily increased ergo the price. 
 
@@ -34,9 +32,9 @@ Python was used for this project. The following libraries were utilized:
 2) Exploratory Data Analysis  
 3) Train-test split   
 4) Modelling:  
-        a) XGboost  
-        b) Random Forest  
-        c) Neural Networks  
+- XGboost  
+- Random Forest  
+- Neural Networks  
 5) Comparison of model performance  
 6) Conclusion   
 
