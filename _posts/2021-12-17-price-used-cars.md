@@ -34,9 +34,9 @@ Python was used for this project. The following libraries were utilized:
 2) Exploratory Data Analysis  
 3) Train-test split   
 4) Modelling:  
-    a) XGboost  
-    b) Random Forest  
-    c) Neural Networks  
+        a) XGboost  
+        b) Random Forest  
+        c) Neural Networks  
 5) Comparison of model performance  
 6) Conclusion   
 
@@ -53,21 +53,21 @@ The exploratory data analysis was done with target questions in mind. Some of th
 There is a direct correlation between price and year. The more higher (more recent) the year, the higher the price of the used car since it is relatively newer. On the other hand, there is an indirect correlation between price and odometer. The higher the odometer reading, the lower the price of the car. This because the odometer reading reflects how much the car has been used. This translates to the amount of wear and tear the car has endured. The more the car has been used, the lower the price. 
 
 <p align="center">
-  <img width="40%" height="40%" src="/../main/img/posts/price-used-cars/correlation.jpg" />
+  <img width="40%" height="40%" src="/img/posts/price-used-cars/correlation.jpg" />
 </p>
 
 This relationship between price to year and price to odometer was also visible in the scatterplots below. 
 
 <p align="center">
-  <img width="40%" height="40%" src="/../main/img/posts/price-used-cars/price-year.jpg" />
-  <img width="40%" height="40%" src="/../main/img/posts/price-used-cars/price-mileage.jpg" />
+  <img width="40%" height="40%" src="/img/posts/price-used-cars/price-year.jpg" />
+  <img width="40%" height="40%" src="img/posts/price-used-cars/price-mileage.jpg" />
 </p>
 
 #### Price Distribution
 A frequency distribution of the prices was prepared, and it showed that the distribution is skewed to the right with a mean of $12,277 and median of $8,995. Majority of the used cars being sold have prices below $20,000.
 
 <p align="center">
-  <img width="100%" height="100%" src="/../main/img/posts/price-used-cars/price-distribution.jpg" />
+  <img width="100%" height="100%" src="/img/posts/price-used-cars/price-distribution.jpg" />
 </p>
 
 ## Modelling & Evaluation
@@ -83,19 +83,19 @@ Evaluation focused mainly on F1 score and Cohen’s Kappa as they are more relia
 The table below summarizes the performance of the 3 models trained. Neural Networks had the best performance with an F1 score of 76.60 and a Cohen kappa of 0.7064.
 
 <p align="center">
-  <img width="50%" height="50%" src="/../main/img/posts/price-used-cars/model-performance.jpg" />
+  <img width="50%" height="50%" src="/img/posts/price-used-cars/model-performance.jpg" />
 </p>
 
 These models were then used on the pandemic dataset. Their performance is summarized in the table below. As we can see, their performance declined. 
 
 <p align="center">
-  <img width="50%" height="50%" src="/../main/img/posts/price-used-cars/model-performance-pandemic-data.jpg" />
+  <img width="50%" height="50%" src="/img/posts/price-used-cars/model-performance-pandemic-data.jpg" />
 </p>
 
 The decline in their performance is summarized in the following table. Random forest had the greatest decline at 30%. 
 
 <p align="center">
-  <img width="50%" height="50%" src="/../main/img/posts/price-used-cars/performance-decline.jpg" />
+  <img width="50%" height="50%" src="/img/posts/price-used-cars/performance-decline.jpg" />
 </p>
 
 This decline in performance in all the models indicate that there has been a dataset shift. Dataset shift occurs when there is a change in the distribution of data. This may have been caused by change of environments.
@@ -103,7 +103,7 @@ This decline in performance in all the models indicate that there has been a dat
 There are various ways of addressing this dataset shift. For this paper, we will only employ model retraining. Since neural network had the best classification performance, it was selected the model for retraining. The model was retrained using the combined dataset with not distinction between pandemic and pre-pandemic data. The same split was used to get training set and the test set. The retrained model had an F1-score of 74.71% and Cohen’s kappa coefficient of 0.6834. These results are better than that of the model trained solely on pre-pandemic data. 
 
 <p align="center">
-  <img width="50%" height="50%" src="/../main/img/posts/price-used-cars/nn-retrained.jpg" />
+  <img width="50%" height="50%" src="/img/posts/price-used-cars/nn-retrained.jpg" />
 </p>
 
 ## Conclusion
