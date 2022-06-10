@@ -71,10 +71,10 @@ A frequency distribution of the prices was prepared, and it showed that the dist
 ## Modelling & Evaluation
 The three models used were trained with 70% of the pre-pandemic data and then tested using the remaining 30% of the pre-pandemic data. The results were then compared using accuracy, precision, recall, F1 score, and Cohen’s Kappa as criteria. 
 
-**Accuracy** is the ratio of correctly predicted observations to the total observations. 
-**Precision** is the ratio of correctly predicted positive observations to the total predicted positive observations. Recall is the ratio of correctly predicted positive observations to the total actual positive observations. 
-**F1-score** is the weighted average of precision and recall. 
-**Cohen’s kappa** measures the proximity of the predicted classes to the actual classes when compared to a random classification. It is one of the best metrics for evaluating multi-class classifiers trained on unbalance datasets. The out put is normalized from 0 to 1. The closer the score is to 1, the better the classifier.
+**Accuracy** is the ratio of correctly predicted observations to the total observations.  
+**Precision** is the ratio of correctly predicted positive observations to the total predicted positive observations. Recall is the ratio of correctly predicted positive observations to the total actual positive observations.  
+**F1-score** is the weighted average of precision and recall.  
+**Cohen’s kappa** measures the proximity of the predicted classes to the actual classes when compared to a random classification. It is one of the best metrics for evaluating multi-class classifiers trained on unbalance datasets. The out put is normalized from 0 to 1. The closer the score is to 1, the better the classifier.  
 
 Evaluation focused mainly on F1 score and Cohen’s Kappa as they are more reliable measures of multi-class classification problems.
 
