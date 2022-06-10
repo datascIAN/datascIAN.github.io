@@ -112,3 +112,6 @@ Neural Networks performed the best with an F1 score of 76.60 and Cohen kappa sco
 When used on the pandemic dataset, the model's performance declined indicating a dataset shift. 
 
 Model retraining was employed to address the dataset shift. 
+
+
+**The project can be accessed through this [link](https://github.com/datascian/Predicting-the-Price-Range-of-Used-Cars) with the codes and the full [documentation](https://github.com/datascian/Predicting-the-Price-Range-of-Used-Cars/blob/main/John%20Ian%20Castaneda%20-%20CIND%20820%20-%20Final%20Report.pdf).**
