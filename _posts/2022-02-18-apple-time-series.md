@@ -37,7 +37,14 @@ Python was used for this project. The following libraries were utilized:
 14. Evaluate Model Performance
 
 ## The Data
+The stock data for Apple Inc. (APPL) and the S&P500 (^GSPC) were taken directly from Yahoo! Finance using the yfinance library.
 
+```python
+raw_data = yfinance.download(tickers= "AAPL, ^GSPC", interval="1d",auto_adjust = True, treads=True, group_by='ticker')
+```
+<p align="center">
+  <img width="100%" height="100%" src="/img/posts/apple-stock-time-series/yahoo-finance-data.jpg" />
+</p>
 
 ## Data Cleaning and Preprocessing
 
@@ -48,9 +55,7 @@ Python was used for this project. The following libraries were utilized:
 #### Correlation
 
 
-<p align="center">
-  <img width="75%" height="75%" src="/img/posts/price-used-cars/correlation.jpg" />
-</p>
+
 
 
 ## Modelling & Evaluation
