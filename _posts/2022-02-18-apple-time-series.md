@@ -46,6 +46,7 @@ raw_data = yfinance.download(tickers= "AAPL, ^GSPC", interval="1d",auto_adjust =
   <img width="100%" height="100%" src="/img/posts/apple-stock-time-series/yahoo-finance-data.jpg" />
 </p>
 
+hi
 ## Data Cleaning and Preprocessing
 
 
