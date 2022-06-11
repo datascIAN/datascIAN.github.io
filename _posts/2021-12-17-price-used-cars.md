@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Predicting the Price Range of Used Cars"
-subtitle: "Machine Learning Classification"
+subtitle: "Machine Learning - Classification"
 background: '/img/posts/price-used-cars/blue-car.jpg'
 ---
 
