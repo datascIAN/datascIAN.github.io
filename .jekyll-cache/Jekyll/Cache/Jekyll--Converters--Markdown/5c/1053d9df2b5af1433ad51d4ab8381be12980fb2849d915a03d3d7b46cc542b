@@ -1,0 +1,69 @@
+I"ë<h2 id="description">Description</h2>
+<p>This project aims to produce a model that can forecast the price of Apple Inc. stocks. The S&amp;P500 will be used as an exogenous variable to strengthen model performance. This model can be used on any stock. It can be helpful in our investing strategy as it can provide an indication of what to expect in the future. This helps investors plan ahead to maximize gains and minimize losses.</p>
+
+<h2 id="objectives">Objectives</h2>
+<p>Train a model than can predict the price of the Apple Incâ€™s stock using ARIMA.</p>
+
+<h2 id="tools">Tools</h2>
+<p>Python was used for this project. The following libraries were utilized:</p>
+<ul>
+  <li>Numpy</li>
+  <li>Pandas</li>
+  <li>Matplotlib</li>
+  <li>seaborn</li>
+  <li>scipy</li>
+  <li>statsmodels</li>
+  <li>Pmdarima</li>
+</ul>
+
+<h2 id="steps">Steps</h2>
+<ol>
+  <li>Loading packages</li>
+  <li>Importing the data from Yahoo!Finance</li>
+  <li>Preprocessing the data</li>
+  <li>Plotting the data</li>
+  <li>Test for Stationarity: ADF test</li>
+  <li>Seasonal decomposition</li>
+  <li>Differencing</li>
+  <li>Log transformation</li>
+  <li>KPSS test</li>
+  <li>ACF and PACF</li>
+  <li>Training the Auto ARIMA model</li>
+  <li>Make Predictions</li>
+  <li>Evaluate Model Performance</li>
+</ol>
+
+<h2 id="the-data">The Data</h2>
+<p>The stock data for Apple Inc. (APPL) and the S&amp;P500 (^GSPC) were taken directly from Yahoo! Finance using the yfinance library.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">raw_data</span> <span class="o">=</span> <span class="n">yfinance</span><span class="p">.</span><span class="n">download</span><span class="p">(</span><span class="n">tickers</span><span class="o">=</span> <span class="s">"AAPL, ^GSPC"</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="s">"1d"</span><span class="p">,</span><span class="n">auto_adjust</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">treads</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">group_by</span><span class="o">=</span><span class="s">'ticker'</span><span class="p">)</span>
+</code></pre></div></div>
+<p align="center">
+  <img width="100%" height="100%" src="/img/posts/apple-stock-time-series/yahoo-finance-data.jpg" />
+</p>
+
+<h2 id="plotting-the-data">Plotting the Data</h2>
+<p align="center">
+  <img width="100%" height="100%" src="/img/posts/apple-stock-time-series/closing-prices.jpg" />
+</p>
+<p>The graph shows that there has been an exponential increase in the stock price of Apple in the last 4 years.</p>
+
+<p>When we take each year separately as in the graph below, we can see that there is an increasing trend especially in the more recent years.</p>
+
+<p align="center">
+  <img width="100%" height="100%" src="/img/posts/apple-stock-time-series/price-per-year.jpg" />
+</p>
+
+<p>The graph shows that in the first half of the time series data (2005-2015) the stock price was below $25 with very low variance. The latter years in the dataset show that the price had greater variance and continuosly increased breaching $175. 2019-2021 showed a steeper upward trend compared to previous years.</p>
+
+<h2 id="eda">EDA</h2>
+
+<h4 id="correlation">Correlation</h4>
+
+<h2 id="modelling--evaluation">Modelling &amp; Evaluation</h2>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<hr />
+<p><strong>The project can be accessed through this <a href="https://github.com/datascian/Predicting-the-Price-Range-of-Used-Cars">link</a> with the codes and the full <a href="https://github.com/datascian/Predicting-the-Price-Range-of-Used-Cars/blob/main/John%20Ian%20Castaneda%20-%20CIND%20820%20-%20Final%20Report.pdf">documentation</a>.</strong></p>
+:ET

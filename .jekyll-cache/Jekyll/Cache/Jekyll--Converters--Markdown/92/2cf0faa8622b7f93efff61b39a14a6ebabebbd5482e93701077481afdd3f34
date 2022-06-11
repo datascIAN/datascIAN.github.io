@@ -1,0 +1,132 @@
+I"o <h2 id="description">Description</h2>
+<p>This project aims to produce a model that can forecast the price of Apple Inc. stocks. The S&amp;P500 will be used as an exogenous variable to strengthen model performance. This model can be used on any stock. It can be helpful in our investing strategy as it can provide an indication of what to expect in the future. This helps investors plan ahead to maximize gains and minimize losses.</p>
+
+<h2 id="objectives">Objectives</h2>
+<p>Train a model than can predict the price of the Apple Inc’s stock using ARIMA.</p>
+
+<h2 id="tools">Tools</h2>
+<p>Python was used for this project. The following libraries were utilized:</p>
+<ul>
+  <li>Numpy</li>
+  <li>Pandas</li>
+  <li>Matplotlib</li>
+  <li>seaborn</li>
+  <li>scipy</li>
+  <li>statsmodels</li>
+  <li>Pmdarima</li>
+</ul>
+
+<h2 id="steps">Steps</h2>
+<ol>
+  <li>Loading packages</li>
+  <li>Importing the data from Yahoo!Finance</li>
+  <li>Preprocessing the data</li>
+  <li>Plotting the data</li>
+  <li>Test for Stationarity: ADF test</li>
+  <li>Seasonal decomposition</li>
+  <li>Differencing</li>
+  <li>Log transformation</li>
+  <li>KPSS test</li>
+  <li>Training the Auto ARIMA model</li>
+  <li>Make Predictions</li>
+  <li>Evaluate Model Performance</li>
+</ol>
+
+<h2 id="the-data">The Data</h2>
+<p>The stock data for Apple Inc. (APPL) and the S&amp;P500 (^GSPC) were taken directly from Yahoo! Finance using the yfinance library.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">raw_data</span> <span class="o">=</span> <span class="n">yfinance</span><span class="p">.</span><span class="n">download</span><span class="p">(</span><span class="n">tickers</span><span class="o">=</span> <span class="s">"AAPL, ^GSPC"</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="s">"1d"</span><span class="p">,</span><span class="n">auto_adjust</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">treads</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">group_by</span><span class="o">=</span><span class="s">'ticker'</span><span class="p">)</span>
+</code></pre></div></div>
+<p align="center">
+  <img width="100%" height="100%" src="/img/posts/apple-stock-time-series/yahoo-finance-data.jpg" />
+</p>
+
+<h2 id="plotting-the-data">Plotting the Data</h2>
+<p align="center">
+  <img width="100%" height="100%" src="/img/posts/apple-stock-time-series/closing-prices.jpg" />
+</p>
+<p>The graph shows that there has been an exponential increase in the stock price of Apple in the last 4 years.</p>
+
+<p>When we take each year separately as in the graph below, we can see that there is an increasing trend especially in the more recent years.</p>
+
+<p align="center">
+  <img width="100%" height="100%" src="/img/posts/apple-stock-time-series/price-per-year.jpg" />
+</p>
+
+<p>The graph shows that in the first half of the time series data (2005-2015) the stock price was below $25 with very small movement in the price. The latter years in the dataset show that the price had greater movements and continuosly increased breaching $175. 2019-2021 showed a steeper upward trend compared to previous years.</p>
+
+<h2 id="test-for-stationarity-adf-test">Test for Stationarity: ADF test</h2>
+<p>The <strong>Augmented Dickey Fuller test</strong> is a way to check the stationarity of a timeseries.</p>
+
+<p><strong>Null hypothesis</strong> : The data is non-stationary</p>
+
+<p><strong>Alternative Hhypothesis</strong> : The data is stationary</p>
+
+<p align="center">
+  <img width="60%" height="60%" src="/img/posts/apple-stock-time-series/adf-test.jpg" />
+</p>
+
+<p>The ADFuller test shows a p-value of 1 which is significantly greater than the significance level of 0.05. The test statistics is also greater than the critical values. This means that the time series data is non-stationary. Since the data is non-stationary, we will use the ARIMA model since it is best suited for this type of data.</p>
+
+<h2 id="seasonal-decomposition">Seasonal Decomposition</h2>
+<p align="center">
+  <img width="80%" height="80%" src="/img/posts/apple-stock-time-series/seasonal-decomp.jpg" />
+</p>
+
+<p>The figure above shows that there is no seasonality in the price of Apple stocks.</p>
+
+<h2 id="differencing">Differencing</h2>
+<p>Differencing is a method of transforming a non-stationary time series into a stationary one where the values are the differences between consecutive values of the original data.</p>
+<p align="center">
+  <img width="100%" height="100%" src="/img/posts/apple-stock-time-series/differencing.jpg" />
+</p>
+
+<p>The graph above shows that differencing still produced a data that is non-stationary. The variance towards the end of the data set is much larger than in the earlier years.</p>
+
+<h2 id="log-transformation">Log Transformation</h2>
+<p>Log transformation is a data transformation method in which each variable x is replaced with a log(x). Log transformation was performed on the differenced data. The graph of the log transformed data is presented below.</p>
+<p align="center">
+  <img width="100%" height="100%" src="/img/posts/apple-stock-time-series/log-transformation.jpg" />
+  <img width="60%" height="60%" src="/img/posts/apple-stock-time-series/adf-test-log-trans.jpg" />
+</p>
+<p>The AD fuller test shows a p-value of less that 0.05 and the test statistic is less than the critical value. This confirms that the data is now stationary. The graph shows that the variace is more constant aside from huge spikes in late 2008 and early 2020. These huge spikes pertain to the 2008 financial crisis and the start of the COVID-19 pandemic, respectively.</p>
+
+<h2 id="kpss-test">KPSS Test</h2>
+<p>The KPSS test is another way to determine if a time series data is stationary or not. The null and alternative hypothesis of this test are the opposite that of the ADF test.</p>
+
+<p><strong>Null hypothesis</strong> : The data is stationary</p>
+
+<p><strong>Alternative Hhypothesis</strong> : The data is non-stationary</p>
+
+<p align="center">
+  <img width="60%" height="60%" src="/img/posts/apple-stock-time-series/kpss-test.jpg" />
+</p>
+
+<p>The KPSS confirms the findings of the ADF test that our timeseries data after differencing and log transformation is stationary.</p>
+
+<h2 id="auto-arima-model">Auto ARIMA Model</h2>
+
+<p>The model was trained using auto ARIMA with. The data was split with 90% used for training and the remaining 10% used for testing. The resulting model is a SARIMAX model (1,0,1)x(3,1,1,12). Below is the diagnostics of the model.</p>
+<p align="center">
+  <img width="100%" height="100%" src="/img/posts/apple-stock-time-series/sarimax-diagnostics.jpg" />
+</p>
+<p>Top left: The residual errors fluctuate around the mean of 0 and have a uniform variance.</p>
+
+<p>Top right: The density plot suggest the residuals have a normal distribution with a mean of zero.</p>
+
+<p>Bottom left: The QQ plot also show that the residuals have a normal distribution.</p>
+
+<p>Bottom right: The ACF plot shows that the residual errors are not autocorrelated.</p>
+
+<h2 id="make-predictions--evaluate-model-performance">Make Predictions &amp; Evaluate Model Performance</h2>
+<p>Using the trained model, we predicted the stock price of Apple for the remaining 10% of the dates included in the dataset. We then compared these predicted prices with the actual prices on those dates. The graph below summarizes the performance of the model when compared to the actual values.</p>
+<p align="center">
+  <img width="100%" height="100%" src="/img/posts/apple-stock-time-series/predictions-vs-actual.jpg" />
+</p>
+<p>We can see that the predictions came very close to the actual values.</p>
+
+<p>The model has an RMSE of 14.011 which means that its predictions will have a little difference with the actual prices and this difference will have a mean of $14.</p>
+
+<hr />
+<p><strong>The project can be accessed through this <a href="https://github.com/datascian/Predicting-the-Price-Range-of-Used-Cars">link</a> with the codes and the full <a href="https://github.com/datascian/Predicting-the-Price-Range-of-Used-Cars/blob/main/John%20Ian%20Castaneda%20-%20CIND%20820%20-%20Final%20Report.pdf">documentation</a>.</strong></p>
+:ET
