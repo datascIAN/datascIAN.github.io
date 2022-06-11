@@ -132,4 +132,4 @@ We can see that the predictions came very close to the actual values.
 The model has an RMSE of 14.011 which means that its predictions will have a little difference with the actual prices and this difference will have a mean of $14.
 
 ---
-**The project can be accessed through this [link](https://github.com/datascian/Predicting-the-Price-Range-of-Used-Cars) with the codes and the full [documentation](https://github.com/datascian/Predicting-the-Price-Range-of-Used-Cars/blob/main/John%20Ian%20Castaneda%20-%20CIND%20820%20-%20Final%20Report.pdf).**
+**The project can be accessed on GitHub through this [link](https://github.com/datascian/Apple-Stock---Time-Series-Analysis-with-ARIMA).**
