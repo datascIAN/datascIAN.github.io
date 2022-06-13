@@ -39,7 +39,7 @@ Python was used for this project. The following libraries were utilized:
 6. Conclusion   
 
 ## The Data
-The dataset to be used was taken from [Kaggle.com](https://www.kaggle.com/datasets/austinreese/craigslist-carstrucks-data). The used cars dataset was first scraped in 2018 from Craigslist. It is updated every few months with the latest data. The dataset was split into pre-pandemic and pandemic datasets. There are 23 variables in the dataset before any preprocessing and cleaning. It has 1,961,218 samples with 1,076,152 pre-pandemic data and 885,066 data during the pandemic.
+The dataset used was taken from [Kaggle.com](https://www.kaggle.com/datasets/austinreese/craigslist-carstrucks-data). The used cars dataset was first scraped in 2018 from Craigslist. It is updated every few months with the latest data. The dataset was split into pre-pandemic and pandemic datasets. There are 23 variables in the dataset before any preprocessing and cleaning. It has 1,961,218 samples with 1,076,152 pre-pandemic data and 885,066 data during the pandemic.
 
 ## Data Cleaning and Preprocessing
 Steps taken to clean the data included remove unnecessary columns, remove samples wiht missing values, and remove outliers among others. The final dataset after preprocessing and cleaning contained 194,861 rows. All the variables were categorical except for price and mileage (odometer) which were converted to price range and mileage range, respectively. The 14 independent variables were one-hot encoded into 884 independent variables.

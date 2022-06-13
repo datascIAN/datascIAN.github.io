@@ -1,0 +1,53 @@
+I"�<h2 id="description">Description</h2>
+<p>“Unicorn” is a term used to describe a privately held startup company with a value of over $1 billion. This project is an exploration of the a dataset on venture capital unicorns. Insights gleaned from this exploration can help us undsterstand “unicorns” since the term was coined.</p>
+
+<h2 id="objectives">Objectives</h2>
+<ul>
+  <li>Inspect the dataset.</li>
+  <li>Based on the inspection, come up with questions that can be answered with the dataset.</li>
+  <li>Extract information from the dataset with these questions in mind.</li>
+</ul>
+
+<h2 id="tools">Tools</h2>
+<p>Python was used for this project. The following libraries were utilized:</p>
+<ul>
+  <li>Numpy</li>
+  <li>Pandas</li>
+  <li>Matplotlib</li>
+  <li>seaborn</li>
+</ul>
+
+<h2 id="questions">Questions</h2>
+<ol>
+  <li>Top 20 companies with the largest valuations</li>
+  <li>Top 10 countries with the most number of unicorn startups</li>
+  <li>Countries with the highest total valuation of unicorns.</li>
+  <li>Top countries with highest average valuation of unicorns.</li>
+  <li>Top industries with most startups</li>
+  <li>Top industries with the highest total valuation of unicorns.</li>
+  <li>Top investors with most startups</li>
+  <li>Number of startups per year.</li>
+  <li>Startups per industry per year.</li>
+  <li>Startups per country per year.</li>
+</ol>
+
+<h2 id="the-data">The Data</h2>
+<p>The dataset was taken from <a href="https://www.kaggle.com/datasets/ramjasmaurya/unicorn-startups">Kaggle.com</a>. There are 936 companies included in this dataset with 8 columns. The 8th column is a list of major investors for each company. The contents of this column was expanded into 4 columns for each major investor if applicable.</p>
+
+<h2 id="1-top-20-companies-with-the-largest-valuations">1. Top 20 companies with the largest valuations.</h2>
+<p align="center">
+  <img width="100%" height="100%" src="/img/posts/unicorn-startups/q1.jpg" />
+</p>
+<p>Bytedance from the artificial intelligence industry has the highest valuation at $140 billion. It is followed by SpaceX at $100.3 billion and Stripe at $95 billion. Of the top 20 unicorns with the highest valuations, 7 of them come from Fintech industry.</p>
+
+<h2 id="2-top-10-countries-with-the-most-number-of-unicorn-startups">2. Top 10 countries with the most number of unicorn startups.</h2>
+<p align="center">
+  <img width="100%" height="100%" src="/img/posts/unicorn-startups/q2.jpg" />
+</p>
+<p>The United States has the most number of unicorns at 478. A distant second is China with 169. These countries are also the top 2 largest economies in the world. India has the 3rd highest number of unicorns with 51 companies.</p>
+
+<h2 id="3-countries-with-the-highest-total-valuation-of-unicorns">3. Countries with the highest total valuation of unicorns.</h2>
+
+<hr />
+<p><strong>The project can be accessed on GitHub through this <a href="https://github.com/datascian/Predicting-the-Price-Range-of-Used-Cars">link</a> with the codes and the full <a href="https://github.com/datascian/Predicting-the-Price-Range-of-Used-Cars/blob/main/John%20Ian%20Castaneda%20-%20CIND%20820%20-%20Final%20Report.pdf">documentation</a>.</strong></p>
+:ET
