@@ -1,0 +1,125 @@
+I"�"<h2 id="description">Description</h2>
+<p><strong><a href="https://www.youtube.com/channel/UCNiolZNLiJplmCCzqk9-czQ">Be Kind Rewind</a></strong> is a YouTube channel mainly about past best actress winners, women in film, and film and Hollywood history. The videos delve into the career of these accomplished women and the circumstances that lead to their win. The videos are well-researched and very insightful. I love history, I love film, and I love women in film so I truly enjoy every video from this channel. And so I wanted to see what other people thought about this channel and its videos.</p>
+
+<p>In this project, I apply natural language processing (NLP) to determine the general sentiments on this channel. The results of this project will provide the creator behind this YouTube channel a good idea of how viewers perceive the content produced.</p>
+
+<h2 id="objectives">Objectives</h2>
+<p>The goals of this project are:</p>
+<ul>
+  <li>Use the YouTube API to collect the data for this project</li>
+  <li>Analyze the performance of the videos of the channel</li>
+  <li>Determine the polarity of sentiments in the video comments using NLP</li>
+  <li>Get the most common words used in comments</li>
+  <li>Determine the overall sentiment for the channel</li>
+</ul>
+
+<h2 id="tools">Tools</h2>
+<ul>
+  <li>Python - used to extract the data, clean and preprocess the data, get the sentiments from the comments, and analyze the data. The libraries used were:
+    <ul>
+      <li>NumPy</li>
+      <li>Pandas</li>
+      <li>Google API client</li>
+      <li>Matplotlib</li>
+      <li>Seaborn</li>
+      <li>WordCloud</li>
+      <li>Demoji</li>
+      <li>NLTK</li>
+      <li>TextBlob</li>
+    </ul>
+  </li>
+  <li>SQL Server – store the data and retrieve information for analysis</li>
+  <li>YouTube API – source of the data</li>
+</ul>
+
+<h2 id="steps">Steps</h2>
+<ol>
+  <li>Download channel, video, and comments data from YouTube using the YouTube API</li>
+  <li>Clean and preprocess the data</li>
+  <li>Perform exploratory data analysis (EDA) on the data</li>
+  <li>Analyze the sentiment of all the comments on the videos and the channel as a whole</li>
+  <li>Conclusion</li>
+</ol>
+
+<h2 id="the-data">The Data</h2>
+<p>The data was scraped using Google Youtube Data API version 3.0. There are two datasets: one for the details for each of the 67 videos on the channel and one for the comments posted for all of the videos on the channel. The first dataset was used to analyze the overall performance of the channel. The second dataset was used to get the sentiments from viewers.</p>
+
+<h2 id="data-cleaning-and-preprocessing">Data Cleaning and Preprocessing</h2>
+<p>After importing the libraries and extracting the data of the channel from YouTube, we prepared the data for analysis by doing the following:</p>
+<ul>
+  <li>Check the data types of each column and number of non-null values</li>
+  <li>Convert numerical columns to numeric</li>
+  <li>Remove the column ‘favouriteCount’ since this column has no data</li>
+  <li>Convert ‘duration’ column to seconds</li>
+  <li>Add a column that indicates the day of the week the videos and comments were published based on the column ‘publishedAt’</li>
+  <li>Add column ‘tagCount’</li>
+  <li>Remove emojis</li>
+  <li>Insert a column to indicate the language the comment was written in and remove comments in languages other than English</li>
+  <li>Remove stop words and special characters, lemmatize words</li>
+  <li>Get the number of words in each comment</li>
+</ul>
+
+<h2 id="eda">EDA</h2>
+<p>The exploratory data analysis was performed using SQL to retrieve information from the datasets. Python was also used for the analysis to visualize the analysis. Some of the notable insights gained from this analysis are as follows:</p>
+
+<h4 id="top-performing-videos-by-viewcount">Top performing videos by viewCount</h4>
+<p align="center">
+  <img width="60%" height="60%" src="/img/posts/youtube-bkr/eda1t.jpg" />
+  <img width="100%" height="100%" src="/img/posts/youtube-bkr/eda1g.jpg" />
+</p>
+<p>The most viewed videos are those that discuss movies and personalities who are familiar to today’s audiences. The channel goes over the story of past best actress winners all the way from the infancy of the Oscars. Average viewers may not be able to easily recognize and relate to the subject of some of the videos especially those from the Golden Age of Hollywood. The top 4 most viewed videos cover movies that were recently made (or remade) or actresses that are currently active who won their Oscar within the last 2 decades. The top 5 and 6 most watched video also has this characteristic in a way. They delve into the story  of 2 actresses from the Golden Age of Hollywood who were the subjects of a recent popular TV series.</p>
+
+<h4 id="average-view-count-of-videos">Average view count of videos</h4>
+<p align="center">
+  <img width="60%" height="60%" src="/img/posts/youtube-bkr/eda3.jpg" />
+</p>
+<p>The average views of channel per video is 352,354.</p>
+
+<h4 id="videos-with-the-most-comments">Videos with the most comments</h4>
+<p align="center">
+  <img width="60%" height="60%" src="/img/posts/youtube-bkr/eda5t.jpg" />
+  <img width="100%" height="100%" src="/img/posts/youtube-bkr/eda5g.jpg" />
+</p>
+<p>Videos with the most comments are also those that cover actresses and movies that are more recent as they would be more familiar to today’s viewers.</p>
+
+<h4 id="average-number-of-comments">Average number of comments</h4>
+<p align="center">
+  <img width="60%" height="60%" src="/img/posts/youtube-bkr/eda7.jpg" />
+</p>
+<p>The average number of comments on the channel’s videos is 1,246.</p>
+
+<h4 id="video-comments-per-1000-views">Video comments per 1000 views</h4>
+<p>p align=”center”&gt;
+  <img width="60%" height="60%" src="/img/posts/youtube-bkr/eda8t.jpg" />
+  <img width="100%" height="100%" src="/img/posts/youtube-bkr/eda8g.jpg" />
+&lt;/p&gt;
+Video comments are correlated to views since the more views a video has, the more chance the video will have of getting comments. Thus, to be able to better compare the comment count of videos, we need to consider them in the context of their view counts. The comment count was divided by the total views of each video and then multiplied by 1000. Using this ratio, we can see that the most commented video per 1000 views is the channel’s Q&amp;A video. Perhaps the reason behind this is that this video is a way for the creator of the channel to engage with the channel’s audience and this, in turn, resulted to more comments.</p>
+
+<h4 id="average-number-of-words-in-comments-for-all-videos">Average number of words in comments for all videos</h4>
+<p align="center">
+  <img width="60%" height="60%" src="/img/posts/youtube-bkr/eda15.jpg" />
+</p>
+<p>Comments have an average length of 33 words.</p>
+
+<h4 id="correlation-of-viewcount-likecount-commentcount-duration-tagcount-and-comment_view_ratio">Correlation of viewCount, likeCount, commentCount, duration, tagCount, and comment_view_ratio</h4>
+<p align="center">
+  <img width="100%" height="100%" src="/img/posts/youtube-bkr/eda19.jpg" />
+</p>
+<p>There is a high correlation between viewCount, likeCount, and commentCount. The more a video is viewed, the higher the chance of it getting likes and comments from the viewers.</p>
+
+<h4 id="scatterplot--of-viewcount-against-commentcount-likecount-tagcount-and-durationsecs">Scatterplot  of viewCount against commentCount, likeCount, tagCount, and durationSecs</h4>
+<p align="center">
+  <img width="100%" height="100%" src="/img/posts/youtube-bkr/eda20.jpg" />
+</p>
+<p>As seen in the correlation matrix, there is a positive correlation between commentCount and viewCount as well as likeCount and viewCount. Videos with higher viewCounts have higher like counts and comment counts. There is no distinguishable relationship between durationSecs and viewCount as well as tagCount and viewCount.</p>
+
+<h4 id="correlation">Correlation</h4>
+<p>There is a direct correlation between price and year. The more higher (more recent) the year, the higher the price of the used car since it is relatively newer. On the other hand, there is an indirect correlation between price and odometer. The higher the odometer reading, the lower the price of the car. This because the odometer reading reflects how much the car has been used. This translates to the amount of wear and tear the car has endured. The more the car has been used, the lower the price.</p>
+
+<p align="center">
+  <img width="75%" height="75%" src="/img/posts/price-used-cars/correlation.jpg" />
+</p>
+
+<hr />
+<p><strong>The project can be accessed on GitHub through this <a href="https://github.com/datascian/Predicting-the-Price-Range-of-Used-Cars">link</a> with the codes and the full <a href="https://github.com/datascian/Predicting-the-Price-Range-of-Used-Cars/blob/main/John%20Ian%20Castaneda%20-%20CIND%20820%20-%20Final%20Report.pdf">documentation</a>.</strong></p>
+:ET
