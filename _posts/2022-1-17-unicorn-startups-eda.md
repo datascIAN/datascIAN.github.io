@@ -6,7 +6,7 @@ background: '/img/posts/unicorn-startups/unicorn1.jpg'
 ---
 
 ## Description
-"Unicorn" is a term used to describe a privately held startup company with a value of over $1 billion. This project is an exploration of the a dataset on venture capital unicorns. Insights gleaned from this exploration can help us undsterstand "unicorns" since the term was coined. 
+"Unicorn" is a term used to describe a privately held startup company with a value of over $1 billion. This project is an exploration of the a dataset on venture capital unicorns. This analysis can help us get some insights on these unicorns.
 
 ## Objectives
 - Inspect the dataset.
