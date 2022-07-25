@@ -28,7 +28,8 @@ The goals of this project are:
   <img width="30%" height="30%" src="/img/posts/youtube-bkr/txtblob.png" />
   <img width="30%" height="30%" src="/img/posts/youtube-bkr/sql.png" />
 </p>
-- Python - used to extract the data, clean and preprocess the data, get the sentiments from the comments, and analyze the data. The libraries used were:  
+
+- **Python** - used to extract the data, clean and preprocess the data, get the sentiments from the comments, and analyze the data. The libraries used were:  
   - NumPy  
   - Pandas  
   - Google API client  
@@ -38,8 +39,8 @@ The goals of this project are:
   - Demoji  
   - NLTK  
   - TextBlob  
-- SQL Server – store the data and retrieve information for analysis  
-- YouTube API – source of the data  
+- **SQL Server** – store the data and retrieve information for analysis  
+- **YouTube API** – source of the data  
 
 ## Steps
 1. Download channel, video, and comments data from YouTube using the YouTube API
