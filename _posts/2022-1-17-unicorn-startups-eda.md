@@ -15,11 +15,11 @@ background: '/img/posts/unicorn-startups/unicorn1.jpg'
 
 ## Tools
 <p align="center">
-  <img width="30%" height="30%" src="/img/posts/price-used-cars/python.png" />
-  <img width="30%" height="30%" src="/img/posts/price-used-cars/numpy.png" />
-  <img width="30%" height="30%" src="/img/posts/price-used-cars/pandas.png" />
-  <img width="30%" height="30%" src="/img/posts/price-used-cars/matplotlib.png" />
-  <img width="30%" height="30%" src="/img/posts/price-used-cars/seaborn.png" />
+  <img width="30%" height="30%" src="/img/posts/unicorn-startups/python.png" />
+  <img width="30%" height="30%" src="/img/posts/unicorn-startups/numpy.png" />
+  <img width="30%" height="30%" src="/img/posts/unicorn-startups/pandas.png" />
+  <img width="30%" height="30%" src="/img/posts/unicorn-startups/matplotlib.png" />
+  <img width="30%" height="30%" src="/img/posts/unicorn-startups/seaborn.png" />
 </p>
 Python was used for this project. The following libraries were utilized:  
 - Numpy

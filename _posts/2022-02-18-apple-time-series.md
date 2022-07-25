@@ -13,12 +13,12 @@ Train a model than can predict the price of the Apple Inc's stock using ARIMA.
 
 ## Tools
 <p align="center">
-  <img width="30%" height="30%" src="/img/posts/price-used-cars/python.png" />
-  <img width="30%" height="30%" src="/img/posts/price-used-cars/numpy.png" />
-  <img width="30%" height="30%" src="/img/posts/price-used-cars/pandas.png" />
-  <img width="30%" height="30%" src="/img/posts/price-used-cars/matplotlib.png" />
-  <img width="30%" height="30%" src="/img/posts/price-used-cars/seaborn.png" />
-  <img width="30%" height="30%" src="/img/posts/price-used-cars/scipy.png" />
+  <img width="30%" height="30%" src="/img/posts/apple-stock-time-series/python.png" />
+  <img width="30%" height="30%" src="/img/posts/apple-stock-time-series/numpy.png" />
+  <img width="30%" height="30%" src="/img/posts/apple-stock-time-series/pandas.png" />
+  <img width="30%" height="30%" src="/img/posts/apple-stock-time-series/matplotlib.png" />
+  <img width="30%" height="30%" src="/img/posts/apple-stock-time-series/seaborn.png" />
+  <img width="30%" height="30%" src="/img/posts/apple-stock-time-series/scipy.png" />
 </p>
 Python was used for this project. The following libraries were utilized:  
 - Numpy
