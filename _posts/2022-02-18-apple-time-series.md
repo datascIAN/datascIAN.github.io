@@ -12,6 +12,14 @@ This project aims to produce a model that can forecast the price of Apple Inc. s
 Train a model than can predict the price of the Apple Inc's stock using ARIMA. 
 
 ## Tools
+<p align="center">
+  <img width="30%" height="30%" src="/img/posts/price-used-cars/python.png" />
+  <img width="30%" height="30%" src="/img/posts/price-used-cars/numpy.png" />
+  <img width="30%" height="30%" src="/img/posts/price-used-cars/pandas.png" />
+  <img width="30%" height="30%" src="/img/posts/price-used-cars/matplotlib.png" />
+  <img width="30%" height="30%" src="/img/posts/price-used-cars/seaborn.png" />
+  <img width="30%" height="30%" src="/img/posts/price-used-cars/scipy.png" />
+</p>
 Python was used for this project. The following libraries were utilized:  
 - Numpy
 - Pandas
