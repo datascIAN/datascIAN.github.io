@@ -18,6 +18,16 @@ Because of this, I wanted to make a machine learning model that could predict th
 - Determine any dataset shift
 
 ## Tools
+<p align="center">
+  <img width="30%" height="30%" src="/img/posts/price-used-cars/python.png" />
+  <img width="30%" height="30%" src="/img/posts/price-used-cars/numpy.png" />
+  <img width="30%" height="30%" src="/img/posts/price-used-cars/pandas.png" />
+  <img width="30%" height="30%" src="/img/posts/price-used-cars/matplotlib.png" />
+  <img width="30%" height="30%" src="/img/posts/price-used-cars/seaborn.png" />
+  <img width="30%" height="30%" src="/img/posts/price-used-cars/xgboost.png" />
+  <img width="30%" height="30%" src="/img/posts/price-used-cars/scikit learn.png" />
+  <img width="30%" height="30%" src="/img/posts/price-used-cars/keras.png" />
+</p>
 Python was used for this project. The following libraries were utilized:  
 - Numpy
 - Pandas
