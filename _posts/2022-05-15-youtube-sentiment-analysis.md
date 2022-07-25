@@ -19,6 +19,15 @@ The goals of this project are:
 - Determine the overall sentiment for the channel  
 
 ## Tools
+<p align="center">
+  <img width="30%" height="30%" src="/img/posts/price-used-cars/python.png" />
+  <img width="30%" height="30%" src="/img/posts/price-used-cars/numpy.png" />
+  <img width="30%" height="30%" src="/img/posts/price-used-cars/pandas.png" />
+  <img width="30%" height="30%" src="/img/posts/price-used-cars/matplotlib.png" />
+  <img width="30%" height="30%" src="/img/posts/price-used-cars/seaborn.png" />
+  <img width="30%" height="30%" src="/img/posts/price-used-cars/txtblob.png" />
+  <img width="30%" height="30%" src="/img/posts/price-used-cars/sql.png" />
+</p>
 - Python - used to extract the data, clean and preprocess the data, get the sentiments from the comments, and analyze the data. The libraries used were:  
   - NumPy  
   - Pandas  
