@@ -8,7 +8,7 @@ background: '/img/posts/ttc-bus-delays/ttc-bus.jpg'
 ## Description
 
 <p align="center">
-  <img width="30%" height="60%" src="/img/posts/ttc-bus-delays/TTC-logo.png" />
+  <img width="60%" height="60%" src="/img/posts/ttc-bus-delays/TTC-logo.png" />
 </p>
 
 Torontonians love to hate the TTC. However, compared to transportation systems in other major north American cities, Toronto has one of the better systems. Where other cities’ transportation systems are oriented towards getting people from the outside the center of the city (suburbs) to inside it (downtown), the TTC also provides service for people travelling between suburbs and neighborhoods. The TTC has only 4 subway lines, but they are complemented by an intricate system of streetcars and buses making it easy to get around. The TTC has 192 bus routes and 8,552 bus stops.
@@ -78,13 +78,13 @@ The 2 major causes of delays are equipment (Mechanical) and personnel (Operation
 Bus route 36 which travels along Finch had the most number of delays at 773. This was followed by route 52 which travels along Lawrence with 650 delays. Route 32 which travels along Eglinton West is in third place with 635 delays.
 
 <p align="center">
-  <img width="100%" height="60%" src="/img/posts/ttc-bus-delays/per_day.jpg" />
+  <img width="60%" height="60%" src="/img/posts/ttc-bus-delays/per_day.jpg" />
 </p>
 
 Most delays occur on Friday, Thursday and Wednesday.
 
 <p align="center">
-  <img width="100%" height="60%" src="/img/posts/ttc-bus-delays/per_hour.jpg" />
+  <img width="60%" height="60%" src="/img/posts/ttc-bus-delays/per_hour.jpg" />
 </p>
 
 During the day, a greater number of delays occur in the afternoon between 2-5pm.
