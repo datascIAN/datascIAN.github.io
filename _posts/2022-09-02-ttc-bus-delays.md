@@ -6,6 +6,11 @@ background: '/img/posts/ttc-bus-delays/ttc-bus.jpg'
 ---
 
 ## Description
+
+<p align="center">
+  <img width="30%" height="30%" src="/img/posts/ttc-bus-delays/TTC-logo.png" />
+</p>
+
 Torontonians love to hate the TTC. However, compared to transportation systems in other major north American cities, Toronto has one of the better systems. Where other cities’ transportation systems are oriented towards getting people from the outside the center of the city (suburbs) to inside it (downtown), the TTC also provides service for people travelling between suburbs and neighborhoods. The TTC has only 4 subway lines, but they are complemented by an intricate system of streetcars and buses making it easy to get around. 
 
 This system is not without flaws, and delays are an inevitable part of the commuter’s experience. 
