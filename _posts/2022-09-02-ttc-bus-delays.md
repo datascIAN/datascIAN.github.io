@@ -87,7 +87,7 @@ Most delays occur on Friday, Thursday and Wednesday.
   <img width="100%" height="60%" src="/img/posts/ttc-bus-delays/per_hour.jpg" />
 </p>
 
-During the day, delays often occur in the afternoon between 2-5pm.
+During the day, a greater number of delays occur in the afternoon between 2-5pm.
 
 ## Implications and Future Direction:
 - Gather complete data on vehicles used and the delays reported to see which vehicles cause more delays than others.
