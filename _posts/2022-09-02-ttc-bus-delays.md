@@ -63,7 +63,7 @@ The daily average number of delays throughout this period is around 120 per day.
   <img width="100%" height="100%" src="/img/posts/ttc-bus-delays/per_location.jpg" />
 </p>
 
-Pioneer Village station, Kennedy station and Kipling station were where most delays occured. 
+Pioneer Village station, Kennedy station and Kipling station were where most delays occurred. 
 
 <p align="center">
   <img width="100%" height="100%" src="/img/posts/ttc-bus-delays/per_incident.jpg" />
