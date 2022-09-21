@@ -69,7 +69,7 @@ Pioneer Village station, Kennedy station and Kipling station were where most del
   <img width="100%" height="100%" src="/img/posts/ttc-bus-delays/per_incident.jpg" />
 </p>
 
-The 2 major causes of delays are due to equipment (Mechanical) and personnel (Operations - Operator). Together, they account for 63.86% of all delays. 
+The 2 major causes of delays are equipment (Mechanical) and personnel (Operations - Operator). Together, they account for 63.86% of all delays. 
 
 <p align="center">
   <img width="100%" height="100%" src="/img/posts/ttc-bus-delays/per_route.jpg" />
